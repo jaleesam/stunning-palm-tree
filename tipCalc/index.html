@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF=8">
+    <meta name="viewpoint" content="width=device-width, inital scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <h1>Tipping Calculator</h1>
+    <p> Bill Total ($):<br><input id="totalbill" type="number"></p>
+    <p>Number of People Paying:<br><input id="people" type="number"></p>
+    <p>
+        Tipping Percentage:<br>
+        <select>
+            <option value="fifteen">15%</option>
+            <option value="eighteen">18%</option>
+            <option value="twenty">20%</option>
+            <option value="twentyfive">25%</option>
+        </select>
+        <br>
+    </p>
+    <p>
+        <!-- TODO: Make hidden if possible -->
+        If "Other" please specify (%):<br>
+        <input id="other" type="number">
+    </p>
+    <button onclick="getData()">Calculate</button>
+</body>
+<script>
+    // Take in  bill's total
+    function getData() {
+        var tBill = document.getElementById("totalbill").value;
+        var peopleNum = document.getElementById("people").value;
+        console.log(tBill);
+        console.log(peopleNum);
+
+    }
+        // Take in desired tip percentage
+        // Take in Number of persons
+        // Output total tip
+        // Output tip per person
+        // Output person total (even split)
+
+</script>
+
+</html>
