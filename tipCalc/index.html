@@ -31,24 +31,33 @@
     <button onclick="getData()">Calculate</button>
 </body>
 <script>
-   
+   var tBill;
+   var tipPercent;
     function getData() {
          // Take in  bill's total
-        var tBill = document.getElementById("totalbill").value;
+       tBill = document.getElementById("totalbill").value;
         console.log(tBill);
         // Take in Number of persons
         var peopleNum = document.getElementById("people").value;
         console.log(peopleNum);
          // Take in desired tip percentage
-        var tipPercent = document.getElementById("percenttip").value;
+        tipPercent = document.getElementById("percenttip").value;
         console.log(tipPercent);
         if(tipPercent === "other"){
             tipPercent = document.getElementById("other").value;
             console.log(tipPercent);
         }
+        tipCalculation();
     }
-       
-        // Output total tip
+
+    function tipCalculation() {
+          // Output total tip
+        console.log(tBill);
+        var totalTip = parseInt(tBill, 10) * parseInt(tipPercent, 10) / 100;
+        console.log(tBill);
+        console.log(totalTip);
+    }
+      
         // Output tip per person
         // Output person total (even split)
 
