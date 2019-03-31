@@ -14,11 +14,12 @@
     <p>Number of People Paying:<br><input id="people" type="number"></p>
     <p>
         Tipping Percentage:<br>
-        <select>
-            <option value="fifteen">15%</option>
-            <option value="eighteen">18%</option>
-            <option value="twenty">20%</option>
-            <option value="twentyfive">25%</option>
+        <select id="percenttip">
+            <option value="15">15%</option>
+            <option value="18">18%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+            <option value="other">Other</option>
         </select>
         <br>
     </p>
@@ -30,16 +31,23 @@
     <button onclick="getData()">Calculate</button>
 </body>
 <script>
-    // Take in  bill's total
+   
     function getData() {
+         // Take in  bill's total
         var tBill = document.getElementById("totalbill").value;
-        var peopleNum = document.getElementById("people").value;
         console.log(tBill);
-        console.log(peopleNum);
-
-    }
-        // Take in desired tip percentage
         // Take in Number of persons
+        var peopleNum = document.getElementById("people").value;
+        console.log(peopleNum);
+         // Take in desired tip percentage
+        var tipPercent = document.getElementById("percenttip").value;
+        console.log(tipPercent);
+        if(tipPercent === "other"){
+            tipPercent = document.getElementById("other").value;
+            console.log(tipPercent);
+        }
+    }
+       
         // Output total tip
         // Output tip per person
         // Output person total (even split)
